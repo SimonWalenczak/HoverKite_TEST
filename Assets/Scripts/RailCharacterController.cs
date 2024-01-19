@@ -2,15 +2,28 @@ using UnityEngine;
 
 public class RailCharacterController : MonoBehaviour
 {
-    public float forwardSpeed = 5f;          // Forward movement speed
-    public float acceleration = 2f;          // Acceleration on slopes
-    public float jumpForce = 10f;            // Force applied when jumping
-    public Transform groundCheck;            // Transform representing the position for ground checking
-    public LayerMask groundLayer;            // LayerMask for detecting the ground
+    public float forwardSpeed = 5f;          
+    public float acceleration = 2f;         
+    public float jumpForce = 10f;          
+    public Transform groundCheck;           
+    public LayerMask groundLayer;          
+    public LayerMask BumperLayer;          
 
     private Rigidbody rb;
     [SerializeField] private bool isGrounded;
-
+    
+    private void OnTriggerEnter(Collider other)
+    {
+        if (Contains(BumperLayer, other.gameObject.layer))
+        {
+            Jump();
+        }
+    }
+    private static bool Contains(LayerMask mask, int layer)
+    {
+        return mask == (mask | (1 << layer));
+    }
+    
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -22,22 +35,13 @@ public class RailCharacterController : MonoBehaviour
 
     void Update()
     {
-        // Check if the player is grounded
         isGrounded = Physics.Raycast(groundCheck.position, Vector3.down, 0.1f, groundLayer);
 
-        // Auto-forward movement
         MoveForward();
-
-        // Jumping
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
-        {
-            Jump();
-        }
     }
 
     void FixedUpdate()
     {
-        // Acceleration on slopes
         ApplyAccelerationOnSlopes();
     }
 
@@ -52,7 +56,7 @@ public class RailCharacterController : MonoBehaviour
         if (isGrounded)
         {
             float slopeAngle = Vector3.Angle(Vector3.up, GetGroundNormal());
-            float accelerationMultiplier = Mathf.Lerp(1f, acceleration, slopeAngle / 45f); // Adjust 45 as needed
+            float accelerationMultiplier = Mathf.Lerp(1f, acceleration, slopeAngle / 45f);
 
             Vector3 accelerationForce = transform.forward * accelerationMultiplier;
             rb.AddForce(accelerationForce, ForceMode.Acceleration);
