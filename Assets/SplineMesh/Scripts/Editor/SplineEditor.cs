@@ -10,7 +10,7 @@ namespace SplineMesh {
         private const int QUAD_SIZE = 12;
         private static Color CURVE_COLOR = new Color(0.8f, 0.8f, 0.8f);
         private static Color CURVE_BUTTON_COLOR = new Color(0.8f, 0.8f, 0.8f);
-        private static Color DIRECTION_COLOR = Color.red;
+        private static Color DIRECTION_COLOR = Color.blue;
         private static Color DIRECTION_BUTTON_COLOR = Color.red;
         private static Color UP_BUTTON_COLOR = Color.green;
 
