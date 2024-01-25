@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEditor;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -185,13 +184,13 @@ namespace SplineMesh {
                     } else {
                         float distOnSpline = intervalStart + distance;
                         if (distOnSpline > spline.Length) {
-                            if (spline.IsLoop) {
-                                while (distOnSpline > spline.Length) {
-                                    distOnSpline -= spline.Length;
-                                }
-                            } else {
+                            // if (spline.IsLoop) {
+                            //     while (distOnSpline > spline.Length) {
+                            //         distOnSpline -= spline.Length;
+                            //     }
+                            // } else {
                                 distOnSpline = spline.Length;
-                            }
+                            //}
                         }
                         sample = spline.GetSampleAtDistance(distOnSpline);
                     }

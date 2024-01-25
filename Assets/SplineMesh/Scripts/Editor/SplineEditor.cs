@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
 namespace SplineMesh {
@@ -277,8 +275,8 @@ namespace SplineMesh {
             }
             GUI.enabled = true;
 
-            showUpVector = GUILayout.Toggle(showUpVector, "Show up vector");
-            spline.IsLoop = GUILayout.Toggle(spline.IsLoop, "Is loop");
+            //showUpVector = GUILayout.Toggle(showUpVector, "Show up vector");
+            //spline.IsLoop = GUILayout.Toggle(spline.IsLoop, "Is loop");
 
             // nodes
             GUI.enabled = false;

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using UnityEngine;
@@ -42,10 +41,10 @@ namespace SplineMesh {
         /// </summary>
         public float Length;
 
-        [SerializeField]
+        //[SerializeField]
         private bool isLoop;
-
-        public bool IsLoop {
+        
+        private bool IsLoop {
             get { return isLoop; }
             set {
                 isLoop = value;
