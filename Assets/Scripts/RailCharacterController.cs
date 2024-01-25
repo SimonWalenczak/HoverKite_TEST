@@ -40,38 +40,14 @@ public class RailCharacterController : MonoBehaviour
         MoveForward();
     }
 
-    void FixedUpdate()
-    {
-        ApplyAccelerationOnSlopes();
-    }
-
     void MoveForward()
     {
         Vector3 forwardMovement = transform.forward * forwardSpeed * Time.deltaTime;
         rb.MovePosition(rb.position + forwardMovement);
     }
-
-    void ApplyAccelerationOnSlopes()
-    {
-        if (isGrounded)
-        {
-            float slopeAngle = Vector3.Angle(Vector3.up, GetGroundNormal());
-            float accelerationMultiplier = Mathf.Lerp(1f, acceleration, slopeAngle / 45f);
-
-            Vector3 accelerationForce = transform.forward * accelerationMultiplier;
-            rb.AddForce(accelerationForce, ForceMode.Acceleration);
-        }
-    }
-
+    
     void Jump()
     {
         rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-    }
-
-    Vector3 GetGroundNormal()
-    {
-        RaycastHit hit;
-        Physics.Raycast(groundCheck.position, Vector3.down, out hit, 0.1f, groundLayer);
-        return hit.normal;
     }
 }
