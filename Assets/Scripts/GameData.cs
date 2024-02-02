@@ -1,4 +1,4 @@
 public class GameData
 {
-    public static int NumberOfPlayers;
+    public static int NumberOfPlayer;
 }
