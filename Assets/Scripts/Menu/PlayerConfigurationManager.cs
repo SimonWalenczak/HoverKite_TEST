@@ -85,7 +85,7 @@ public class PlayerConfigurationManager : MonoBehaviour
     {
         TransitionObject.SetActive(true);
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene("SelectLevel");
+        SceneManager.LoadScene("FakeMovement");
     }
 }
 

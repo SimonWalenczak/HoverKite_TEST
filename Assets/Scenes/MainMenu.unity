@@ -282,7 +282,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 62600516}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1970203637}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: ValidPreset
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &62600516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -826,6 +838,7 @@ GameObject:
   - component: {fileID: 1970203635}
   - component: {fileID: 1970203634}
   - component: {fileID: 1970203636}
+  - component: {fileID: 1970203637}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -904,6 +917,19 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!114 &1970203637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970203632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f90ebb4a58b9b47b81bd35d830abf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransitionObject: {fileID: 0}
 --- !u!1 &2086454919
 GameObject:
   m_ObjectHideFlags: 0

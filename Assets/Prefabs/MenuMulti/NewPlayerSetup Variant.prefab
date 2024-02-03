@@ -280,6 +280,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 38488f401ac6b1b40967aec6290453ad,
         type: 3}
+    - target: {fileID: 3039021477986180497, guid: d781f12d7544ae64d8bf5b7819f13752,
+        type: 3}
+      propertyPath: m_MoveAction
+      value: 
+      objectReference: {fileID: -19628254655258128, guid: eb45cd7825b6d2f41a2e696767e75884,
+        type: 3}
+    - target: {fileID: 3039021477986180497, guid: d781f12d7544ae64d8bf5b7819f13752,
+        type: 3}
+      propertyPath: m_ActionsAsset
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: eb45cd7825b6d2f41a2e696767e75884,
+        type: 3}
+    - target: {fileID: 3039021477986180497, guid: d781f12d7544ae64d8bf5b7819f13752,
+        type: 3}
+      propertyPath: m_SubmitAction
+      value: 
+      objectReference: {fileID: 8978654052788661240, guid: eb45cd7825b6d2f41a2e696767e75884,
+        type: 3}
     - target: {fileID: 3909515345450368056, guid: d781f12d7544ae64d8bf5b7819f13752,
         type: 3}
       propertyPath: m_Pivot.x
