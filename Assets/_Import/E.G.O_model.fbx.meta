@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Ch03_Body
-    second: {fileID: 2100000, guid: 9ff27c5f564f93b4b9dd463dbb2677ae, type: 2}
+    second: {fileID: 2100000, guid: f1486c8b078ac12419010bde745a8910, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule

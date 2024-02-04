@@ -460,6 +460,12 @@ PrefabInstance:
       objectReference: {fileID: 2378478577328538783}
     - target: {fileID: 5249239007238055770, guid: d781f12d7544ae64d8bf5b7819f13752,
         type: 3}
+      propertyPath: _actualMesh
+      value: 
+      objectReference: {fileID: 919132149155446097, guid: eb4121b504ebfd649bd6b0c77aff7fbb,
+        type: 3}
+    - target: {fileID: 5249239007238055770, guid: d781f12d7544ae64d8bf5b7819f13752,
+        type: 3}
       propertyPath: _readyImage
       value: 
       objectReference: {fileID: 6937796508333701908}
